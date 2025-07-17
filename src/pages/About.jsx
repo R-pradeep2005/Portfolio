@@ -3,7 +3,7 @@ import Work_Card from '../components/Work_Card'
 
 const About = () => {
   return (
-    <div className='flex flex-col items-start p-6 w-[900px] bg-[#1e1e1f] border-1 border-[#383838] rounded-[20px] h-full'>
+    <div className='flex flex-col items-start p-6    rounded-[20px] h-full'>
       <h1 className='font-bold text-[32px] pt-4'>About Me</h1>
       <div className='h-[5px] w-[40px] mt-6 rounded-full bg-gradient-to-l from-[#ffbb5c] to-[#ffdb70]'></div>
       <p className='text-[#d6d6d6] pt-6 text-left text-[15px]'>

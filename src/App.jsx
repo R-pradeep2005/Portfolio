@@ -22,8 +22,8 @@ function App() {
 
   return (
     
-      <div className='flex flex-row items-center bg-[#121212]'>
-        <section className='flex flex-col items-center bg-[#1e1e1f] border-1 border-[#313131] rounded-[20px] p-6'>
+      <div className='flex flex-row items-start bg-[#121212]'>
+        <section className='flex flex-col items-center bg-[#1e1e1f] border-1 border-[#313131] rounded-[24px] p-6'>
         <img width={'150px'} src='src\assets\profile.png'></img>
         <h1 className='text-[26px] mt-6 mb-4 font-semibold'>Pradeep Ravisankar</h1>
         <p className=' rounded-[8px]  p-2 text-[12px] bg-[#2b2b2c] text-center'>Software Engineer</p>
@@ -34,13 +34,15 @@ function App() {
         <Info_Block src='src\assets\icon-location.svg' name='LOCATION' detail='Chennai'/>
         </div>
         </section>
-        <main className='flex flex-col items-center bg-[#1e1e1f] border-1 border-[#313131] rounded-[20px] p-6'>
+        <main className='flex flex-col relative items-center ml-4 bg-[#1e1e1f] border-1 border-[#313131] rounded-[24px] p-6 pt-0 '>
+       <div className='static'>
         <Routes>
-          <Route path='/' element={<About/>}/>
+          <Route path='/About' element={<About/>}/>
           <Route path='/Resume' element={<Resume/>}/>
-          <Route path='/Projects' element={<Projects/>}/>
+          <Route path='/Project' element={<Projects/>}/>
           <Route path='/Contact' element={<Contact/>}/>
-        </Routes>
+        </Routes></div> 
+        <div className='absolute to-[-50px] right-0'><Menu_Card /></div>
         </main>
         
 
