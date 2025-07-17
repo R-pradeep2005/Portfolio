@@ -23,8 +23,8 @@ const Projects = () => {
     <div className='flex flex-col items-start p-6 w-[900px] bg-[#1e1e1f] border-1 border-[#383838] rounded-[20px] h-full'>
     <h1 className='font-bold text-[32px] pt-4'>Projects</h1>
     <div className='h-[5px] w-[40px] mt-6 rounded-full bg-gradient-to-l from-[#ffbb5c] to-[#ffdb70]'></div>
-    <Filter_Card props={display}/>
-    <div className='grid grid-cols-3 gap-4 m-6 ml-0'>{filtered_card.length==0?<div  className='text-xl ml-18 text-[#ffbb5c]'>Projects Comming Soon !</div>:filtered_card.map((item,index)=>(<Project_Card key={index} src={item.src} title={item.title}  type={item.type} /> ))}
+    <Filter_Card props={display}/> 
+    <div className='grid grid-cols-3 gap-4 m-6 ml-0'>{filtered_card.length==0?<div  className='text-xl ml-18  text-[#ffbb5c]'>Projects Comming Soon !</div>:filtered_card.map((item,index)=>(<Project_Card key={index} src={item.src} title={item.title}  type={item.type} /> ))}
          
         
 

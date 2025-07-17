@@ -2,7 +2,7 @@ import React from 'react'
 
 const Resume_card = (props) => {
   return (
-    <div className='flex flex-col mt-6'>
+    <div className='flex flex-col mt-12 mb-12'>
         <div className='flex flex-row items-center justify-start'>
                 <div className='flex items-center justify-center p-2 bg-[#202022] border-1 border-[#4e4e4e] rounded-[8px] shadow-md'>
                  <img className='w-[18px] h-[18px]' src='src\assets\icon-book.svg'></img>

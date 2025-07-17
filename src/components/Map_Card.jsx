@@ -2,7 +2,7 @@ import React from 'react'
 
 const Map_Card = () => {
   return (
-    <div><iframe
+    <div className='mt-8 '><iframe
   width="800"
   height="380"
   style={{borderRadius:'20px', filter: "grayscale(100%)"}}  
