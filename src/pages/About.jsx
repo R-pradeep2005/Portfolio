@@ -3,7 +3,7 @@ import Work_Card from '../components/Work_Card'
 
 const About = () => {
   return (
-    <div className='flex flex-col items-start p-6    rounded-[20px] h-full'>
+    <div className='flex flex-col items-start     rounded-[20px] h-full'>
       <h1 className='font-bold text-[32px] pt-4'>About Me</h1>
       <div className='h-[5px] w-[40px] mt-6 rounded-full bg-gradient-to-l from-[#ffbb5c] to-[#ffdb70]'></div>
       <p className='text-[#d6d6d6] pt-6 text-left text-[15px]'>
@@ -12,7 +12,7 @@ const About = () => {
 
       </p>
       <h1 className='font-semibold text-[24px] mt-12'>What I'm Doing</h1>
-      <div className='grid grid-cols-2 gap-4 mt-6 w-[90%]'>
+      <div className='grid grid-cols-2 gap-4 mt-6 w-full'>
         <Work_Card src='src\assets\vector-react.svg' title="FUll Stack Development" brief='Full stack development using react express mongodb and nodejs' />
         <Work_Card src='src\assets\vector-expo.svg' title="Expo App Development" brief='Android App development using expo express mongodb and nodejs' />
         <Work_Card src='src\assets\vector-git.svg' title="Version Control" brief='Maintain the source version using git and github for efficent code management' />

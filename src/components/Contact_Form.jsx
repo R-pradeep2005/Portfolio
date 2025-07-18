@@ -9,7 +9,7 @@ const Contact_Form = () => {
         </h3>
         <div className='flex flex-row w-full items-center'>
             <input className='border-1 border-[#383838] m-3 ml-0 w-full h-[54px] pl-4 rounded-xl'placeholder='Full Name' required></input>
-            <input className='border-1 border-[#383838] m-3 mr-0 w-full h-[54px] pl-4 rounded-xl'placeholder='Email address' required></input>
+            <input type='email' className='border-1 border-[#383838] m-3 mr-0 w-full h-[54px] pl-4 rounded-xl'placeholder='Email address' required></input>
         </div>
         <input className='flex  border-1 w-full border-[#383838] m-3 ml-0  h-[100px] pl-4 rounded-xl'placeholder='Your Message'></input>  
         <div className='flex flex-row w-full justify-end mt-3  '>
