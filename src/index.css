@@ -26,12 +26,13 @@
       transform: scale(1);
       opacity: 1;
     }
-
+ 
+    
    
     
   }
    .animation-scale{
-    animation: scale-in 10s cubic-bezier(0.4,0,0.2,1)  both;
+    animation: scale-in 0.5s cubic-bezier(0.4,0,0.2,1)  both;
    }
 }
 /* 

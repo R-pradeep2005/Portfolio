@@ -2,6 +2,24 @@ import React from 'react'
 import Work_Card from '../components/Work_Card'
 
 const About = () => {
+      const card=[{src:'src/assets/vector-react.svg',
+        title:'FUll Stack Development', 
+        brief:'Full stack development using react express mongodb and nodejs'},
+        {src:'src/assets/vector-expo.svg',
+          title:'Expo App Development', 
+          brief:'Android App development using expo express mongodb and nodejs'},
+        {src:'src/assets/vector-git.svg',
+          title:'Version Control', 
+          brief:'Maintain the source version using git and github for efficent code management'},
+        {src:'src/assets/vector-oops.svg',
+          title:'Object-Oriented Programming', 
+          brief:'Writing scalable and maintainable code using OOP principles in Python, Java, C++, and C#'}
+          ,
+        {src:'src/assets/img-deploy.png',
+          title:'Deployment', 
+          brief:'FullDeployment using cloud platforms'}
+        ]
+
   return (
     <div className='flex flex-col items-start     rounded-[20px] h-full'>
       <h1 className='font-bold text-[32px] pt-4'>About Me</h1>
@@ -13,12 +31,7 @@ const About = () => {
       </p>
       <h1 className='font-semibold text-[24px] mt-12'>What I'm Doing</h1>
       <div className='grid grid-cols-2 gap-4 mt-6 w-full'>
-        <Work_Card src='src\assets\vector-react.svg' title="FUll Stack Development" brief='Full stack development using react express mongodb and nodejs' />
-        <Work_Card src='src\assets\vector-expo.svg' title="Expo App Development" brief='Android App development using expo express mongodb and nodejs' />
-        <Work_Card src='src\assets\vector-git.svg' title="Version Control" brief='Maintain the source version using git and github for efficent code management' />
-        <Work_Card src='src\assets\vector-oops.svg' title="Object-Oriented Programming" brief='Writing scalable and maintainable code using OOP principles in Python, Java, C++, and C#' />
-        <Work_Card src='src\assets\img-deploy.png' title="Deployment" brief='Deployment using cloud platforms' />
-
+            {card.map((item,index)=>(<Work_Card  src={item.src} title={item.title} brief={item.brief}/>))}
       </div>
     </div>
   )
