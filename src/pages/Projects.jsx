@@ -4,16 +4,10 @@ import Filter_Card from '../components/Filter_Card'
 
 const Projects = () => {
    const [type_name,settype] =useState('All')
-    const card=[{src:"src/assets/demo-project.png",
-        title:'Post office System',
-        type:'Full Stack'
-    },{src:"src/assets/demo-project.png",
-        title:'Post office System',
-        type:'Api'},
-    {src:"src/assets/demo-project.png",
-        title:'Post office System',
-        type:'Chrome extension'
-    }]
+    const card=[{src:"src/assets/card-location_alarm.png",
+        title:'Location Alarm Application',
+        type:'Expo'
+    } ]
          
     const display=(typ)=>{
             settype(typ)

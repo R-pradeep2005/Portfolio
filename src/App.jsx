@@ -17,6 +17,7 @@ import Contact from './pages/Contact'
 import Projects from './pages/Projects'
 import Resume from './pages/Resume'
 import emailjs from '@emailjs/browser'
+import { Tooltip } from 'react-tooltip'
  
 
 function App() {
@@ -32,10 +33,12 @@ function App() {
     
       <div className='flex flex-row items-stretch bg-[#121212]'>
         <section className='flex flex-col min-h-[882px] items-center justify-center bg-[#1e1e1f] border-1 border-[#313131] cursor-context-menu rounded-[24px] p-4'>
-        <img width={'150px'} src='src\assets\profile.png'></img>
+        <img data-tooltip-id='t_profile' data-tooltip-content="Profile picture" width={'150px'} src='src\assets\profile.png'></img>
+        <Tooltip id='t_profile' place='top'></Tooltip>
         <h1 data-tooltip-content={'hello'}  data-tooltip-class-name='text-white' className='text-[26px] mt-6 mb-4 font-semibold cursor-pointer'>Pradeep Ravisankar</h1>
 
-        <p className=' rounded-[8px]  p-2 text-[12px] bg-[#2b2b2c] text-center'>Software Engineer</p>
+        <p data-tooltip-id='t_role' data-tooltip-content="Role" className=' rounded-[8px]  p-2 text-[12px] bg-[#2b2b2c] text-center'>Software Engineer</p>
+         <Tooltip id='t_role' place='top'></Tooltip>
         <div className='h-[1.5px] w-full bg-[#313132] rounded-full mt-6 '></div>
         <div> 
         <Info_Block src='src\assets\icon-mail.svg' name='EMAIL' detail='pradeepravisankar1@gmail.com'/>
@@ -43,8 +46,8 @@ function App() {
         <Info_Block src='src\assets\icon-location.svg' name='LOCATION' detail='Chennai'/>
         </div>
         <div className='flex flex-row gap-8 mt-8'>
-          <Github_Icon link='#'/>
-          <Linkedin_Icon link='#' />
+          <Github_Icon link='https://github.com/R-pradeep2005'/>
+          <Linkedin_Icon link='https://www.linkedin.com/in/pradeep-ravisankar-500229281' />
         </div>
         </section>
         <main className='flex flex-col relative  min-h-[882px] items-start w-full ml-4 bg-[#1e1e1f] border-1 border-[#313131] h-[100%] rounded-[24px] p-6 pt-0 '>
