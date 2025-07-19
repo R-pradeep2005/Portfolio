@@ -31,26 +31,31 @@ function App() {
 
   return (
     
-      <div className='flex flex-row items-stretch bg-[#121212]'>
-        <section className='flex flex-col min-h-[882px] items-center justify-center bg-[#1e1e1f] border-1 border-[#313131] cursor-context-menu rounded-[24px] p-4'>
+      <div className='flex lg:flex-row lg:items-stretch lg:bg-[#121212] md:flex-col md:items-stretch  '>
+        <section className='flex flex-col lg:min-h-[882px] md:mb-8 md:pl-8 lg:items-center md:items-start justify-center bg-[#1e1e1f] border-1 border-[#313131] cursor-context-menu md:w-full rounded-[24px] p-4'>
+        <div className='flex lg:flex-col md:flex-row lg:items-center md:gap-8'>
         <img data-tooltip-id='t_profile' data-tooltip-content="Profile picture" width={'150px'} src='src\assets\profile.png'></img>
         <Tooltip id='t_profile' place='top'></Tooltip>
-        <h1 data-tooltip-content={'hello'}  data-tooltip-class-name='text-white' className='text-[26px] mt-6 mb-4 font-semibold cursor-pointer'>Pradeep Ravisankar</h1>
+        <div className='flex flex-col  '><h1 data-tooltip-content={'hello'}  data-tooltip-class-name='text-white' className='text-[26px] mt-6 mb-4 font-semibold cursor-pointer'>Pradeep Ravisankar</h1>
 
         <p data-tooltip-id='t_role' data-tooltip-content="Role" className=' rounded-[8px]  p-2 text-[12px] bg-[#2b2b2c] text-center'>Software Engineer</p>
-         <Tooltip id='t_role' place='top'></Tooltip>
+         <Tooltip id='t_role' place='top'></Tooltip></div></div>
+        
+        
         <div className='h-[1.5px] w-full bg-[#313132] rounded-full mt-6 '></div>
-        <div> 
+        <div className='lg:flex lg:flex-col md:grid md:grid-cols-2 md:gap-y-0 md:gap-12 w-full'> 
         <Info_Block src='src\assets\icon-mail.svg' name='EMAIL' detail='pradeepravisankar1@gmail.com'/>
         <Info_Block src='src\assets\icon-phone.svg' name='PHONE' detail='+91 7904537192'/>
         <Info_Block src='src\assets\icon-location.svg' name='LOCATION' detail='Chennai'/>
         </div>
-        <div className='flex flex-row gap-8 mt-8'>
+        <div className='h-[1.5px] w-full lg:hidden bg-[#313132] rounded-full mt-6 '></div>
+
+        <div className='flex flex-row gap-8 md:gap-10 md:m-6 w-full items-center justify-center mt-8'>
           <Github_Icon link='https://github.com/R-pradeep2005'/>
           <Linkedin_Icon link='https://www.linkedin.com/in/pradeep-ravisankar-500229281' />
         </div>
         </section>
-        <main className='flex flex-col relative  min-h-[882px] items-start w-full ml-4 bg-[#1e1e1f] border-1 border-[#313131] h-[100%] rounded-[24px] p-6 pt-0 '>
+        <main className='flex flex-col relative  min-h-[882px] items-start w-full lg:ml-4 bg-[#1e1e1f] border-1 border-[#313131] h-[100%] rounded-[24px] p-6 pt-0 '>
        <div className='static w-full '>
         <Routes>
           <Route path='/' element={<About/>}/>

@@ -29,7 +29,7 @@ const About = () => {
 
       </p>
       <h1 className='font-semibold text-[24px] mt-12'>What I'm Doing</h1>
-      <div className='grid grid-cols-2 gap-4 mt-6 w-full'>
+      <div className='lg:grid lg:grid-cols-2 lg:gap-4 lg:mt-6 md:grid-cols-2 md:mt-4 h-full w-full'>
             {card.map((item,index)=>(<Work_Card key={index} src={item.src} title={item.title} brief={item.brief}/>))}
       </div>
     </div>
