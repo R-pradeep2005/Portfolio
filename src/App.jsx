@@ -18,22 +18,43 @@ import Projects from './pages/Projects'
 import Resume from './pages/Resume'
 import emailjs from '@emailjs/browser'
 import { Tooltip } from 'react-tooltip'
+import { useEffect, useState } from 'react'
  
 
 function App() {
+  const [drop,setDrop]=useState(0)
   const options={
     publicKey: 'rg4VrHjvUAkA6h-ew',
-    privateKey:'wDRwiTj6v9zYI5UCx5lBp'
-    // privateKey:import.meta.env.VITE_PRIVATE_KEY
+ 
+    privateKey:import.meta.env.VITE_PRIVATE_KEY
 
   }
+  const show_contact=()=>{
+    setDrop(!drop)
+  }
+    
+
+  useEffect(()=>{
+    const handle_resize=()=>{
+         let width= window.innerWidth;
+  width>1024?setDrop(1):setDrop(0);
+    }
+    handle_resize()
+    window.addEventListener('resize',handle_resize)
+    return ()=>{
+      window.removeEventListener('resize',handle_resize)
+       }
+  },[]
+     
+)
+ 
+
   emailjs.init(options)
 
   return (
-    
-      <div className='flex lg:flex-row lg:items-stretch lg:bg-[#121212] md:flex-col md:items-stretch  '>
-        <section className='flex flex-col lg:min-h-[882px] md:mb-8 md:pl-8 lg:items-center md:items-start justify-center bg-[#1e1e1f] border-1 border-[#313131] cursor-context-menu md:w-full rounded-[24px] p-4'>
-        <div className='flex lg:flex-col md:flex-row lg:items-center md:gap-8'>
+      <div className='flex lg:flex-row   lg:items-stretch lg:bg-[#121212] flex-col items-stretch justify-center  '>
+        <section className='flex flex-col relative md:transition-[width,height] p-6 md:duration-200  md:ease-in lg:min-h-[882px] md:mb-8 md:pl-8 lg:items-center md:items-start mb-4 justify-center bg-[#1e1e1f] border-1 border-[#313131] lg:w-[450px] lg:p-6 cursor-context-menu  rounded-[24px] '>
+        <div className='flex lg:flex-col mt-6 sm:flex-row flex-col items-center pb-4 gap-8'>
         <img data-tooltip-id='t_profile' data-tooltip-content="Profile picture" width={'150px'} src='src\assets\profile.png'></img>
         <Tooltip id='t_profile' place='top'></Tooltip>
         <div className='flex flex-col  '><h1 data-tooltip-content={'hello'}  data-tooltip-class-name='text-white' className='text-[26px] mt-6 mb-4 font-semibold cursor-pointer'>Pradeep Ravisankar</h1>
@@ -42,20 +63,21 @@ function App() {
          <Tooltip id='t_role' place='top'></Tooltip></div></div>
         
         
-        <div className='h-[1.5px] w-full bg-[#313132] rounded-full mt-6 '></div>
-        <div className='lg:flex lg:flex-col md:grid md:grid-cols-2 md:gap-y-0 md:gap-12 w-full'> 
+        <div className={`${drop?'h-[1.5px] w-full bg-[#313132] rounded-full mt-6':'hidden'} lg:h-[1.5px] lg:w-full lg:bg-[#313132] lg:rounded-full lg:mt-6'  `}></div>
+        <div className={`${drop?'lg:flex lg:flex-col md:grid md:grid-cols-2 md:gap-y-0 md:gap-12':'hidden'}`}> 
         <Info_Block src='src\assets\icon-mail.svg' name='EMAIL' detail='pradeepravisankar1@gmail.com'/>
         <Info_Block src='src\assets\icon-phone.svg' name='PHONE' detail='+91 7904537192'/>
         <Info_Block src='src\assets\icon-location.svg' name='LOCATION' detail='Chennai'/>
         </div>
-        <div className='h-[1.5px] w-full lg:hidden bg-[#313132] rounded-full mt-6 '></div>
+        <div className={`${drop?'h-[1.5px] w-full bg-[#313132] rounded-full mt-6':'hidden'}  `}></div>
 
-        <div className='flex flex-row gap-8 md:gap-10 md:m-6 w-full items-center justify-center mt-8'>
+        <div className={`${drop?'flex flex-row gap-8 md:gap-10 md:m-6 w-full items-center justify-center mt-8':'hidden'} lg:flex lg:flex-row lg:gap-8  lg:m-6 lg:w-full lg:items-center lg:justify-center lg:mt-8`}>
           <Github_Icon link='https://github.com/R-pradeep2005'/>
           <Linkedin_Icon link='https://www.linkedin.com/in/pradeep-ravisankar-500229281' />
         </div>
+        <div onClick={show_contact} className={`absolute right-0 top-0 lg:hidden`}><Common_Button src='src\assets\icon-view.svg'  name='Show Contacts' /></div>
         </section>
-        <main className='flex flex-col relative  min-h-[882px] items-start w-full lg:ml-4 bg-[#1e1e1f] border-1 border-[#313131] h-[100%] rounded-[24px] p-6 pt-0 '>
+        <main className='flex flex-col relative mb-12 lg:min-h-[882px] items-start w-full lg:ml-4 bg-[#1e1e1f] border-1 border-[#313131] h-[100%] rounded-[24px] p-6 pt-0 '>
        <div className='static w-full '>
         <Routes>
           <Route path='/' element={<About/>}/>
@@ -63,9 +85,10 @@ function App() {
           <Route path='/Project' element={<Projects/>}/>
           <Route path='/Contact' element={<Contact/>}/>
         </Routes></div> 
-        <div className='absolute to-[-50px] right-0'><Menu_Card /></div>
+        <div className='md:absolute md:block md:to-[-50px] hidden md:right-0'><Menu_Card /></div>
         </main>
         
+        <div className='md:hidden bg-[#282829]/85  bottom-0 fixed left-0 flex flex-row justify-center w-full'><Menu_Card /></div>
 
       </div>
 

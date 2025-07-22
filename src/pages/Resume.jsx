@@ -9,12 +9,12 @@ const Resume = () => {
     <h1 className='font-bold text-[32px] pt-4'>Resume</h1>
     <div className='h-[5px] w-[40px] mt-6 rounded-full bg-gradient-to-l from-[#ffbb5c] to-[#ffdb70]'></div>
     <div className='w-full flex flex-row justify-center items-center mt-6'>
-      <a   href='src\assets\Resume.pdf' download className='flex flex-row p-4 h-[54px] ml-2 items-center shadow-md  border-1 hover:border-amber-200 cursor-pointer border-[#767676] bg-[#1e1e1f] rounded-[14px] 
+      <a   href='src\assets\Resume.pdf' download className='flex flex-row p-6 h-[54px] ml-2 items-center shadow-md  border-1 hover:border-amber-200 cursor-pointer border-[#767676] bg-[#1e1e1f] rounded-[14px] 
     '>
  <img  className='w-[18px] h-[18px] ' src='src\assets\icon-download.svg' alt="" />
  <p className=' pl-2 text-[16px] font-semibold text-[#ffdb70]'>Download Resume</p>   
     </a >
-     <a href='src\assets\Resume.pdf' target='_blank'   className='flex flex-row p-4 h-[54px] ml-2 items-center shadow-md  border-1 hover:border-amber-200 cursor-pointer border-[#767676] bg-[#1e1e1f] rounded-[14px] 
+     <a href='src\assets\Resume.pdf' target='_blank'   className='flex flex-row p-6 h-[54px] ml-2 items-center shadow-md  border-1 hover:border-amber-200 cursor-pointer border-[#767676] bg-[#1e1e1f] rounded-[14px] 
     '>
  <img  className='w-[18px] h-[18px] ' src='src\assets\icon-view.svg' alt="" />
  <p className=' pl-2 text-[16px] font-semibold text-[#ffdb70]'>View Resume</p>   
