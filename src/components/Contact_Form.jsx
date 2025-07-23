@@ -43,7 +43,7 @@ const Contact_Form = () => {
         <input name='message' value={formData.message} onChange={handlechange} className='flex  border-1 w-full border-[#383838] m-3 ml-0  h-[100px] pl-4 rounded-xl'placeholder='Your Message'></input>  
         <div className='flex flex-col sm:flex-row w-full sm:items-center items-stretch justify-end mt-3  '>
           <div id='feedback' className='sm:mr-[20%]  align-middle hidden text-green-600'> message sent successfully !</div>
-           <button  type='submit' className='flex flex-row p-4 h-[54px] mt-1 ml-2 items-center justify-center shadow-md  border-1 hover:border-amber-200 cursor-pointer border-[#767676] bg-[#1e1e1f] rounded-[14px] 
+           <button  type='submit' className='flex flex-row p-4 h-[54px] mt-1 sm:ml-2 items-center justify-center shadow-md  border-1 hover:border-amber-200 cursor-pointer border-[#767676] bg-[#1e1e1f] rounded-[14px] 
     '>
           <img  className='w-[18px] h-[18px] ' src='src\assets\icon-send.svg' alt="" />
             <p className=' pl-2 text-[16px] font-semibold text-[#ffdb70]'>Send Message</p>   

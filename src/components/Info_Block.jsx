@@ -1,4 +1,5 @@
 import React from 'react'
+import { Tooltip } from 'react-tooltip'
 
 const Info_Block = (props) => {
   return (
@@ -10,7 +11,8 @@ const Info_Block = (props) => {
             <label className='text-[12px] text-gray-400'>
              {props.name}
             </label>
-            <p className='text-[15px]'>{props.detail}</p>
+            <p data-tooltip-id='t_mail' data-tooltip-content="pradeepravisankar1@gmail.com" className='text-[15px] m-0 text-left w-[132px]  overflow-hidden text-ellipsis whitespace-nowrap  '>{props.detail}</p>
+            <Tooltip id='t_mail' place='top'></Tooltip> 
         </div>
       
     </div>

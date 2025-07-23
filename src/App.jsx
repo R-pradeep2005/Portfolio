@@ -51,10 +51,10 @@ function App() {
 
   emailjs.init(options)
 
-  return (
+  return ( 
       <div className='flex lg:flex-row   lg:items-stretch lg:bg-[#121212] flex-col items-stretch justify-center  '>
         <section className='flex flex-col relative md:transition-[width,height] p-6 md:duration-200  md:ease-in lg:min-h-[882px] md:mb-8 md:pl-8 lg:items-center md:items-start mb-4 justify-center bg-[#1e1e1f] border-1 border-[#313131] lg:w-[450px] lg:p-6 cursor-context-menu  rounded-[24px] '>
-        <div className='flex lg:flex-col mt-6 sm:flex-row flex-col items-center pb-4 gap-8'>
+        <div className='flex lg:flex-col mt-8 sm:flex-row flex-col items-center pb-4 gap-8'>
         <img data-tooltip-id='t_profile' data-tooltip-content="Profile picture" width={'150px'} src='src\assets\profile.png'></img>
         <Tooltip id='t_profile' place='top'></Tooltip>
         <div className='flex flex-col  '><h1 data-tooltip-content={'hello'}  data-tooltip-class-name='text-white' className='text-[26px] mt-6 mb-4 font-semibold cursor-pointer'>Pradeep Ravisankar</h1>
@@ -71,7 +71,7 @@ function App() {
         </div>
         <div className={`${drop?'h-[1.5px] w-full bg-[#313132] rounded-full mt-6':'hidden'}  `}></div>
 
-        <div className={`${drop?'flex flex-row gap-8 md:gap-10 md:m-6 w-full items-center justify-center mt-8':'hidden'} lg:flex lg:flex-row lg:gap-8  lg:m-6 lg:w-full lg:items-center lg:justify-center lg:mt-8`}>
+        <div className='w-full flex flex-row items-center justify-center gap-8 mt-6'>
           <Github_Icon link='https://github.com/R-pradeep2005'/>
           <Linkedin_Icon link='https://www.linkedin.com/in/pradeep-ravisankar-500229281' />
         </div>
@@ -88,7 +88,7 @@ function App() {
         <div className='md:absolute md:block md:to-[-50px] hidden md:right-0'><Menu_Card /></div>
         </main>
         
-        <div className='md:hidden bg-[#282829]/85  bottom-0 fixed left-0 flex flex-row justify-center w-full'><Menu_Card /></div>
+        <div className='md:hidden bg-[#282829]/85 border-t-1 rounded-xl border-[#3d3d3d]  bottom-0 fixed left-0 flex flex-row justify-center w-full'><Menu_Card /></div>
 
       </div>
 
