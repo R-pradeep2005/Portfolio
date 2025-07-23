@@ -2,20 +2,20 @@ import React from 'react'
 import Work_Card from '../components/Work_Card'
 
 const About = () => {
-      const card=[{src:'src/assets/vector-react.svg',
+      const card=[{src:'/assets/vector-react.svg',
         title:'Full Stack Development', 
         brief:'Full stack development using react express mongodb and nodejs'},
-        {src:'src/assets/vector-expo.svg',
+        {src:'/assets/vector-expo.svg',
           title:'Expo App Development', 
           brief:'Android App development using expo express mongodb and nodejs'},
-        {src:'src/assets/vector-git.svg',
+        {src:'/assets/vector-git.svg',
           title:'Version Control', 
           brief:'Maintain the source version using git and github for efficent code management'},
-        {src:'src/assets/vector-oops.svg',
+        {src:'/assets/vector-oops.svg',
           title:'Object-Oriented Programming', 
           brief:'Writing scalable and maintainable code using OOP principles in Python, Java, C++, and C#'}
           ,
-        {src:'src/assets/img-deploy.png',
+        {src:'/assets/img-deploy.png',
           title:'Deployment', 
           brief:'FullDeployment using cloud platforms'}
         ]

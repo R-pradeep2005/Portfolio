@@ -24,7 +24,7 @@ import { useEffect, useState } from 'react'
 function App() {
   const [drop,setDrop]=useState(0)
   const options={
-    publicKey: 'rg4VrHjvUAkA6h-ew',
+    publicKey:import.meta.env.VITE_PUBLIC_KEY,
  
     privateKey:import.meta.env.VITE_PRIVATE_KEY
 
@@ -55,7 +55,7 @@ function App() {
       <div className='flex lg:flex-row   lg:items-stretch lg:bg-[#121212] flex-col items-stretch justify-center  '>
         <section className='flex flex-col relative md:transition-[width,height] p-6 md:duration-200  md:ease-in lg:min-h-[882px] md:mb-8 md:pl-8 lg:items-center md:items-start mb-4 justify-center bg-[#1e1e1f] border-1 border-[#313131] lg:w-[450px] lg:p-6 cursor-context-menu  rounded-[24px] '>
         <div className='flex lg:flex-col mt-8 sm:flex-row flex-col items-center pb-4 gap-8'>
-        <img data-tooltip-id='t_profile' data-tooltip-content="Profile picture" width={'150px'} src='src\assets\profile.png'></img>
+        <img data-tooltip-id='t_profile' data-tooltip-content="Profile picture" width={'150px'} src='/assets/profile.png'></img>
         <Tooltip id='t_profile' place='top'></Tooltip>
         <div className='flex flex-col  '><h1 data-tooltip-content={'hello'}  data-tooltip-class-name='text-white' className='text-[26px] mt-6 mb-4 font-semibold cursor-pointer'>Pradeep Ravisankar</h1>
 
@@ -65,9 +65,12 @@ function App() {
         
         <div className={`${drop?'h-[1.5px] w-full bg-[#313132] rounded-full mt-6':'hidden'} lg:h-[1.5px] lg:w-full lg:bg-[#313132] lg:rounded-full lg:mt-6'  `}></div>
         <div className={`${drop?'lg:flex lg:flex-col md:grid md:grid-cols-2 md:gap-y-0 md:gap-12':'hidden'}`}> 
-        <Info_Block src='src\assets\icon-mail.svg' name='EMAIL' detail='pradeepravisankar1@gmail.com'/>
-        <Info_Block src='src\assets\icon-phone.svg' name='PHONE' detail='+91 7904537192'/>
-        <Info_Block src='src\assets\icon-location.svg' name='LOCATION' detail='Chennai'/>
+        <div data-tooltip-id='t_mail' data-tooltip-content="pradeepravisankar1@gmail.com"><Info_Block src='/assets/icon-mail.svg' name='EMAIL' detail='pradeepravisankar1@gmail.com'/>
+        </div>
+        <Tooltip id='t_mail' place='top'></Tooltip> 
+      
+        <Info_Block src='/assets/icon-phone.svg' name='PHONE' detail='+91 7904537192'/>
+        <Info_Block src='/assets/icon-location.svg' name='LOCATION' detail='Chennai'/>
         </div>
         <div className={`${drop?'h-[1.5px] w-full bg-[#313132] rounded-full mt-6':'hidden'}  `}></div>
 
@@ -75,7 +78,7 @@ function App() {
           <Github_Icon link='https://github.com/R-pradeep2005'/>
           <Linkedin_Icon link='https://www.linkedin.com/in/pradeep-ravisankar-500229281' />
         </div>
-        <div onClick={show_contact} className={`absolute right-0 top-0 lg:hidden`}><Common_Button src='src\assets\icon-view.svg'  name='Show Contacts' /></div>
+        <div onClick={show_contact} className={`absolute right-0 top-0 lg:hidden`}><Common_Button src='/assets/icon-view.svg'  name='Show Contacts' /></div>
         </section>
         <main className='flex flex-col relative mb-12 lg:min-h-[882px] items-start w-full lg:ml-4 bg-[#1e1e1f] border-1 border-[#313131] h-[100%] rounded-[24px] p-6 pt-0 '>
        <div className='static w-full '>
@@ -88,7 +91,7 @@ function App() {
         <div className='md:absolute md:block md:to-[-50px] hidden md:right-0'><Menu_Card /></div>
         </main>
         
-        <div className='md:hidden bg-[#282829]/85 border-t-1 rounded-xl border-[#3d3d3d]  bottom-0 fixed left-0 flex flex-row justify-center w-full'><Menu_Card /></div>
+        <div className='md:hidden bg-[#282829]/40 backdrop-blur-xl p-2 border-t-1 rounded-xl border-[#3d3d3d]  bottom-0 fixed left-0 flex flex-row justify-center w-full'><Menu_Card /></div>
 
       </div>
 

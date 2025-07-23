@@ -22,8 +22,8 @@ const Contact_Form = () => {
 
     event.preventDefault();
 
-    emailjs.send('service_r2pvvvf','template_cwr7oqi',{formData})
-    emailjs.send('service_r2pvvvf','template_zsqnmp9',{formData})
+    emailjs.send(import.meta.env.VITE_SERVICE_ID,'template_cwr7oqi',{formData})
+    emailjs.send(import.meta.env.VITE_SERVICE_ID,'template_zsqnmp9',{formData})
     document.getElementById('feedback').style.display='block'
     delay(()=>(document.getElementById('feedback').style.display='none'),2000)
    
@@ -45,7 +45,7 @@ const Contact_Form = () => {
           <div id='feedback' className='sm:mr-[20%]  align-middle hidden text-green-600'> message sent successfully !</div>
            <button  type='submit' className='flex flex-row p-4 h-[54px] mt-1 sm:ml-2 items-center justify-center shadow-md  border-1 hover:border-amber-200 cursor-pointer border-[#767676] bg-[#1e1e1f] rounded-[14px] 
     '>
-          <img  className='w-[18px] h-[18px] ' src='src\assets\icon-send.svg' alt="" />
+          <img  className='w-[18px] h-[18px] ' src='/assets/icon-send.svg' alt="" />
             <p className=' pl-2 text-[16px] font-semibold text-[#ffdb70]'>Send Message</p>   
     </button >
         </div>
