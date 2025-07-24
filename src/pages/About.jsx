@@ -15,7 +15,7 @@ const About = () => {
           title:'Object-Oriented Programming', 
           brief:'Writing scalable and maintainable code using OOP principles in Python, Java, C++, and C#'}
           ,
-        {src:'/assets/img-deploy.png',
+        {src:'/assets/img-deploy.svg',
           title:'Deployment', 
           brief:'FullDeployment using cloud platforms'}
         ]

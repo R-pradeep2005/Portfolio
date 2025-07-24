@@ -4,7 +4,7 @@ import Filter_Card from '../components/Filter_Card'
 
 const Projects = () => {
    const [type_name,settype] =useState('All')
-    const card=[{src:"/assets/card-location_alarm.png",
+    const card=[{src:"/assets/card-location_alarm.svg",
         title:'Location Alarm Application',
         type:'Expo',
         githublink:'https://github.com/R-pradeep2005/ReachReminder'

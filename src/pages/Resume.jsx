@@ -21,8 +21,8 @@ const Resume = () => {
     </a >
      </div>
 
-    <Resume_card logo='/assets/logo-kcg.jpg' section='Education' institution='Kcg College of Technology' title='Bacholer of Engineering' duration='2022 to 2026'/>
-    <Resume_card logo='/assets/logo-copter_code.jpg' section='Experience' institution='Copter Code' title='Software Developer Intern' duration='1 month' brief='Worked on developing MERN Stack web applications using React.js and Node.js.'/>
+    <Resume_card logo='/assets/logo-kcg.svg' section='Education' institution='Kcg College of Technology' title='Bacholer of Engineering' duration='2022 to 2026'/>
+    <Resume_card logo='/assets/logo-copter_code.svg' section='Experience' institution='Copter Code' title='Software Developer Intern' duration='1 month' brief='Worked on developing MERN Stack web applications using React.js and Node.js.'/>
 
     <h1 className='font-bold text-[24px] pt-6'>My Skills</h1>
     <div className='flex flex-col items-start  pl-6 pr-6 pb-6 mb-3 w-full bg-[#232324] border-1 border-[#383838] mt-4 rounded-[20px] h-full'>
