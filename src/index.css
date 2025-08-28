@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -15,26 +16,29 @@
 }
 
 
-@layer utilities{
+@layer utilities {
 
   @keyframes scale-in {
-    0%{
+    0% {
       transform: scale(0);
       opacity: 0;
     }
-    100%{
+
+    100% {
       transform: scale(1);
       opacity: 1;
     }
- 
-    
-   
-    
+
+
+
+
   }
-   .animation-scale{
-    animation: scale-in 0.5s cubic-bezier(0.4,0,0.2,1)  both;
-   }
+
+  .animation-scale {
+    animation: scale-in 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
 }
+
 /* 
 a {
   font-weight: 500;
