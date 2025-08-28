@@ -35,11 +35,13 @@ function App() {
     
 
   useEffect(()=>{
+    let width= window.innerWidth;
+  width>1024?setDrop(1):setDrop(0);
     const handle_resize=()=>{
          let width= window.innerWidth;
-  width>1024?setDrop(1):setDrop(0);
+  width>1024?setDrop(1):null;
     }
-    handle_resize()
+    
     window.addEventListener('resize',handle_resize)
     return ()=>{
       window.removeEventListener('resize',handle_resize)
